@@ -1,5 +1,3 @@
-                                     <!-- http://www.wrappixel.com/demos/admin-templates/elegant-admin/dark/index5.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -320,6 +318,7 @@
     <script src="../../resource/library/theme-bitcoin/script/dashboard5.js"></script>
     
     <script src="../../modulos/gerenciador-fundo-investimento-financeiro/gerenciador-fundo-investimento-financeiro-model/GerenciadorFundoInvestimentoFinanceiroModel.js"></script>
+    <script src="../../modulos/gerenciador-fundo-investimento-financeiro/gerenciador-fundo-investimento-financeiro-controller/GerenciadorFundoInvestimentoFinanceiroController.js"></script>
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -328,16 +327,22 @@
 
     <!-- <script type="text/javascript">
         $(function () {
-            $('#cc-table').DataTable({
+            $('#cc-table').DataTable({	// FIXME [DESENVOLVIMENTO] --
+	@Transactional
+	public List<AplicacaoCatalogoDTO> recuperarAplicacaoCatalogo() {
+		return repositorioParametro.recuperarAplicacaoCatalogoPorSigla();
+	}
                 "displayLength": 10
             });
         });
     </script> -->
 
     <script type="text/javascript">
+
+        let gerenciadorFundoInvestimentoFinanceiroController = new GerenciadorFundoInvestimentoFinanceiroController();
         
-        var gerenciadorDespesaModelTesouroDireto = new GerenciadorFundoInvestimentoFinanceiroModel();
-        console.log(gerenciadorDespesaModelTesouroDireto);
+        let gerenciadorDespesaModelTesouroDireto = new GerenciadorFundoInvestimentoFinanceiroModel();
+        // console.log(gerenciadorDespesaModelTesouroDireto);
 
     </script>
 

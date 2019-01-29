@@ -1,0 +1,157 @@
+<!-- http://angular-material.fusetheme.com/apps/dashboards/analytics -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../../resource/library/theme-bitcoin/style/style.min.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/dashboard5.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/jquery.toast.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/other-pages.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/multi-select.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/jquery.bootstrap-touchspin.min.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/bootstrap-tagsinput.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/bootstrap-select.min.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/switchery.min.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/select2.min.css" rel="stylesheet">
+    <link href="../../resource/library/theme-bitcoin/style/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <title>Plataforma de Lancamento Financeiro</title>
+</head>
+
+<body class="skin-default-dark fixed-layout">
+
+    <div class="card-header bg-info"></div>
+
+    <div class="row">
+        <form onsubmit="gerenciadorFundoInvestimentoFinanceiroController.salvarInvestimentoFinanceiro(event)">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body wizard-content">
+                        <h4 class="card-title">Fundos de Investimentos e Aplicações Financeiras</h4>
+                        <h6 class="card-subtitle">Gestão de Fundos de Investimentos</h6>
+                        <hr />
+                        <section>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="location1">Instituição Financeira</label>
+                                        <select id="instituicaoFinanceira" name="instituicaoFinanceira" class="custom-select form-control"
+                                            data-style="btn-secondary">
+                                            <option value="">Selecione a Instituição Financeira</option>
+                                            <option value="Amsterdam">Rico Consultoria Financeira</option>
+                                            <option value="Berlin">XP Investimentos</option>
+                                            <option value="Frankfurt">Dubai Investimentos</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nomeInvestimento">Nome do Investimento Financeiro</label>
+                                        <input id="nomeInvestimento" type="text" class="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="tipoMercadoFinanceiro">Tipo de Mercado</label>
+                                    <select id="tipoMercadoFinanceiro" name="tipoMercadoFinanceiro" class="custom-select form-control">
+                                        <option value="">Selecione o tipo de Mercado</option>
+                                        <option value="brasil">Nacional (Brasil)</option>
+                                        <option value="estadosUnidosAmerica">Internacional (Estados Unidos da América)</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="riscoInvestimento">Risco do Ivestimento</label>
+                                        <select id="riscoInvestimento" name="riscoInvestimento" class="custom-select form-control">
+                                            <option value="riscoInvestimentoOption">Escolher</option>
+                                            <option value="riscoInvestimentoOption">Risco Baixo</option>
+                                            <option value="riscoInvestimentoOption">Risco Intermediário</option>
+                                            <option value="riscoInvestimentoOption">Risco Alto</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="dataAquisicaoFundo">Data de Aquisição</label>
+                                        <input id="dataAquisicaoFundo" type="date" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="validadeInvestimento">Validade do Investimento</label>
+                                        <input id="validadeInvestimento" type="date" class="form-control"> </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="valorInvestimento">Valor do Investimento</label>
+                                        <input id="valorInvestimento" type="text" class="form-control"> </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="percentualRendimentoPrevisto">Rendimentos Previstos (%)</label>
+                                        <input id="percentualRendimentoPrevisto" type="text" class="form-control">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row col-md-12">
+        <div class="col-md-10">
+            <button type="button" class="btn btn-info btn-block tst1 btn btn-info"> <i class="fa fa-check"></i>
+                Cadastrar</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-outline-danger btn-block tst4 btn btn-danger"> <i class="fa fa-exclamation-circle"></i>
+                Cancelar</button>
+        </div>
+    </div>
+
+    <script src="../../resource/library/theme-bitcoin/script/jquery-3.2.1.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/popper.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/bootstrap.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/waves.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/sidebarmenu.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/custom.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/datatables.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/raphael-min.js"></script>
+    <script src="../../resource/library/morris.js-0.5.1/morris.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/jquery.sparkline.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/dashboard5.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/toastr.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/jquery.toast.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/sticky-kit.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/jquery.multi-select.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/jquery.bootstrap-touchspin.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/bootstrap-tagsinput.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/bootstrap-select.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/select2.full.min.js"></script>
+    <script src="../../resource/library/theme-bitcoin/script/script.js"></script>
+
+    <script src="../../modulos/gerenciador-fundo-investimento-financeiro/gerenciador-fundo-investimento-financeiro-model/GerenciadorFundoInvestimentoFinanceiroModel.js"></script>
+    <script src="../../modulos/gerenciador-fundo-investimento-financeiro/gerenciador-fundo-investimento-financeiro-controller/GerenciadorFundoInvestimentoFinanceiroController.js"></script>
+
+    <script>
+        let gerenciadorFundoInvestimentoFinanceiroController = new GerenciadorFundoInvestimentoFinanceiroController();
+    </script>
+
+</body>
+
+</html>
