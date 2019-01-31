@@ -52,18 +52,37 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="nomeInvestimento">Nome do Investimento Financeiro</label>
-                                        <input id="nomeInvestimento" type="text" class="form-control" />
+                                        <label for="tipoInvestimento">Tipo do Ivestimento</label>
+                                        <select id="tipoInvestimento" name="tipoInvestimento" class="custom-select form-control">
+                                            <option value="tipoInvestimentoOption">Selecione o Tipo do Ivestimento</option>
+                                            <option value="tipoInvestimentoOption">Renda Fixa</option>
+                                            <option value="tipoInvestimentoOption">Multimercado</option>
+                                            <option value="tipoInvestimentoOption">Mercado de Ações - Opções</option>
+                                            <option value="tipoInvestimentoOption">Mercado de Ações - Ações</option>
+                                            <option value="tipoInvestimentoOption">Investimento Cambial</option>
+                                            <option value="tipoInvestimentoOption">Tesouro Direto</option>
+                                            <option value="tipoInvestimentoOption">Poupança</option>
+                                            <option value="tipoInvestimentoOption">Fundo de Investimentos</option>
+                                            <option value="tipoInvestimentoOption">Previdência Privada</option>
+                                            <option value="tipoInvestimentoOption">Oferta Pública</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <label for="tipoMercadoFinanceiro">Tipo de Mercado</label>
                                     <select id="tipoMercadoFinanceiro" name="tipoMercadoFinanceiro" class="custom-select form-control">
-                                        <option value="">Selecione o tipo de Mercado</option>
+                                        <option value="">Selecione o Tipo de Mercado</option>
                                         <option value="brasil">Nacional (Brasil)</option>
                                         <option value="estadosUnidosAmerica">Internacional (Estados Unidos da América)</option>
                                     </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nomeInvestimento">Nome do Investimento Financeiro</label>
+                                        <input id="nomeInvestimento" type="text" placeholder="Nome do Investimento Financeiro" class="form-control" />
+                                    </div>
                                 </div>
 
                                 <div class="col-md-6">
@@ -91,16 +110,16 @@
                                         <input id="validadeInvestimento" type="date" class="form-control"> </div>
                                 </div>
 
-                                <div class="col-md-3">
+                                <div class="col-md-10">
                                     <div class="form-group">
                                         <label for="valorInvestimento">Valor do Investimento</label>
-                                        <input id="valorInvestimento" type="text" class="form-control"> </div>
+                                        <input id="valorInvestimento" type="text" placeholder="R$ 00,00"  class="form-control"> </div>
                                 </div>
 
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="percentualRendimentoPrevisto">Rendimentos Previstos (%)</label>
-                                        <input id="percentualRendimentoPrevisto" type="text" class="form-control">
+                                        <input id="percentualRendimentoPrevisto" type="text" placeholder="00,00%" class="form-control">
                                     </div>
                                 </div>
 
@@ -123,6 +142,7 @@
         </div>
     </div>
 
+    <script src="../../resource/library/morris.js-0.5.1/morris.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/jquery-3.2.1.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/popper.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/bootstrap.min.js"></script>
@@ -132,7 +152,6 @@
     <script src="../../resource/library/theme-bitcoin/script/custom.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/datatables.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/raphael-min.js"></script>
-    <script src="../../resource/library/morris.js-0.5.1/morris.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/jquery.sparkline.min.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/dashboard5.js"></script>
     <script src="../../resource/library/theme-bitcoin/script/toastr.js"></script>
